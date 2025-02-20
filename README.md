@@ -1,5 +1,8 @@
 # Demo: Node.js type stripping
 
+Blog post about this repository: [“Demo: running TypeScript directly in Node.js”](https://2ality.com/2025/02/nodejs-type-stripping-demo.html)
+
+* Requires Node.js v22.6.0 or later.
 * All the TypeScript code in this repository is run directly by Node.js, via [type stripping](https://nodejs.org/api/typescript.html).
 * Limitation: Type stripping is not supported in dependencies (“inside `node_modules`”). Therefore, we can write apps and bin scripts directly in TypeScript but not libraries.
 
@@ -8,8 +11,14 @@
 * Node’s built-in [test runner](https://nodejs.org/api/test.html)
 * [`util.parseArgs()`](https://nodejs.org/api/util.html#utilparseargsconfig)
 * [`util.styleText()`](https://nodejs.org/api/util.html#utilstyletextformat-text-options)
+* Importing JSON with import attributes:
+  ```ts
+  import pkg from '../package.json' with { type: 'json' };
+  ```
 
 ## Running the CLI app
+
+`npm install` is only required if you need `@types/node` with types for Node.js APIs during editing.
 
 ```
 cd nodejs-type-stripping/
