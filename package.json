@@ -1,0 +1,17 @@
+{
+  "name": "@rauschma/nodejs-type-stripping",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "twice": "./src/twice.ts"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "node --test"
+  },
+  "license": "Unlicense",
+  "devDependencies": {
+    "@types/node": "^22.13.4"
+  }
+}

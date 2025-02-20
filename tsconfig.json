@@ -1,0 +1,45 @@
+// Based on: https://2ality.com/2025/01/tsconfig-json.html
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    // Specified explicitly (not derived from source file paths)
+    "rootDir": ".",
+    "outDir": "dist",
+    "noEmit": true,
+
+    //========== Output: JavaScript ==========
+    "target": "ES2024",
+    "lib": [ "ES2024" ], // remove if you want to use the DOM
+    "skipLibCheck": true,
+    "module": "NodeNext", // sets up "moduleResolution"
+    // Emptily imported modules must exist
+    "noUncheckedSideEffectImports": true,
+
+    //========== Compiling TS with tools other than tsc ==========
+    //----- Emitting .js -----
+    // Enforces keyword `type` for type imports etc.
+    "verbatimModuleSyntax": true, // implies "isolatedModules"
+    // - Forbids non-JavaScript language constructs such as JSX,
+    //   enums, constructor parameter properties and namespaces
+    // - Important for type stripping
+    // "erasableSyntaxOnly": true, // TS 5.8+
+
+    //========== Type checking ==========
+    "strict": true, // activates several useful options
+    "exactOptionalPropertyTypes": true, // remove if not helpful
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+
+    //========== Non-code artifacts ==========
+    // Lets us import JSON files
+    "resolveJsonModule": true,
+
+    //===== Run TS directly =====
+    "allowImportingTsExtensions": true,
+    // Only needed if additionally compiling to JavaScript:
+    "rewriteRelativeImportExtensions": true,
+  }
+}
