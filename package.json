@@ -2,6 +2,9 @@
   "name": "@rauschma/nodejs-type-stripping",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22.6.0"
+  },
   "type": "module",
   "bin": {
     "twice": "./src/twice.ts"
@@ -9,6 +12,10 @@
   "scripts": {
     "tsc": "tsc",
     "test": "node --test"
+  },
+  "// scripts": {
+    "tsc": "Type-check the repository (no files are emitted)",
+    "test": "Find all *_test.ts files and run them"
   },
   "license": "Unlicense",
   "devDependencies": {
