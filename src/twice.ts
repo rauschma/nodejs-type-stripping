@@ -9,8 +9,12 @@ function printHelp(): void {
 
   const {log} = console;
   
-  const b: TagFunction<string> = (templateStrings, ...substitutions) => styleText('bold', String.raw(templateStrings, ...substitutions));
-  const u: TagFunction<string> = (templateStrings, ...substitutions) => styleText('underline', String.raw(templateStrings, ...substitutions));
+  const b: TagFunction<string> = (templateStrings, ...substitutions) => (
+    styleText('bold', String.raw(templateStrings, ...substitutions))
+  );
+  const u: TagFunction<string> = (templateStrings, ...substitutions) => (
+    styleText('underline', String.raw(templateStrings, ...substitutions))
+  );
   
   log(b`${BIN_NAME} ${u`text`}`);
   log(`Print ${u`text`} twice`);
