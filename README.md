@@ -16,6 +16,11 @@ Blog post about this repository: [“Demo: running TypeScript directly in Node.j
   import pkg from '../package.json' with { type: 'json' };
   ```
 
+## Using `src/playground.ts` as a simple TypeScript playground
+
+* `npm run play`
+* Edit `src/playground.ts`. Whenever you save that file, Node.js runs it again and displays its output.
+
 ## Running the CLI app
 
 `npm install` is only required if you need `@types/node` with types for Node.js APIs during editing.
@@ -41,7 +46,7 @@ npm install -g nodejs-type-stripping/
 
 After that, the following global command is available: `twice`
 
-## Maintaining this repository
+## Working on this repository
 
 Type-checking all of the code (no files are emitted due to `"noEmit":true` in `tsconfig.json`):
 

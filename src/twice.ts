@@ -8,7 +8,6 @@ function printHelp(): void {
   const BIN_NAME = Object.keys(pkg.bin)[0];
 
   const {log} = console;
-  
   const b: TagFunction<string> = (templateStrings, ...substitutions) => (
     styleText('bold', String.raw(templateStrings, ...substitutions))
   );

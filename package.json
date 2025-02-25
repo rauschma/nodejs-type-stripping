@@ -11,11 +11,13 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "node --test"
+    "test": "node --test",
+    "play": "node --disable-warning=ExperimentalWarning --watch ./src/playground.ts"
   },
   "// scripts": {
     "tsc": "Type-check the repository (no files are emitted)",
-    "test": "Find all *_test.ts files and run them"
+    "test": "Find all *_test.ts files and run them",
+    "play": "Interactive playground"
   },
   "license": "Unlicense",
   "devDependencies": {
