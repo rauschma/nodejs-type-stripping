@@ -1,9 +1,8 @@
 {
-  "name": "@rauschma/nodejs-type-stripping",
-  "version": "1.0.0",
   "private": true,
+  "// private": "Prevents accidental publishing to npm",
   "engines": {
-    "node": ">=22.6.0"
+    "node": ">=23.6.0"
   },
   "type": "module",
   "bin": {
@@ -20,7 +19,7 @@
     "play": "Interactive playground"
   },
   "license": "Unlicense",
-  "devDependencies": {
-    "@types/node": "^22.13.4"
+  "dependencies": {
+    "@types/node": "^22.13.5"
   }
 }

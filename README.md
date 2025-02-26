@@ -1,8 +1,8 @@
 # Demo: Node.js type stripping
 
-Blog post about this repository: [“Demo: running TypeScript directly in Node.js”](https://2ality.com/2025/02/nodejs-type-stripping-demo.html)
+Blog post about this repository: [“Demo: implementing a Node.js CLI app directly in TypeScript”](https://2ality.com/2025/02/nodejs-type-stripping-demo.html)
 
-* Requires Node.js v22.6.0 or later.
+* Requires [Node.js v23.6.0](https://nodejs.org/en/blog/release/v23.6.0) or later.
 * All the TypeScript code in this repository is run directly by Node.js, via [type stripping](https://nodejs.org/api/typescript.html).
 * Limitation: Type stripping is not supported in dependencies (“inside `node_modules`”). Therefore, we can write apps and bin scripts directly in TypeScript but not libraries.
 
@@ -20,6 +20,8 @@ Blog post about this repository: [“Demo: running TypeScript directly in Node.j
 
 * `npm run play`
 * Edit `src/playground.ts`. Whenever you save that file, Node.js runs it again and displays its output.
+
+More information: 2ality blog post [“Simple TypeScript playground via `node --watch`”](https://2ality.com/2025/02/node-watch-typescript-playground.html)
 
 ## Running the CLI app
 
@@ -65,7 +67,7 @@ npm t
 **Important:** Node.js does not support TypeScript in library packages (that are dependencies of other packages). But you can use it to write CLI apps and upload those to npm.
 
 * Remove `"private"` from `package.json` (this setting currently prevents publishing to npm).
-* Update or add various properties a necessary.
+* Update or add various properties a necessary – especially a `"name"` and a `"version"`.
 * How to publish a package to npm: chapter [“Creating cross-platform shell scripts”](https://exploringjs.com/nodejs-shell-scripting/ch_creating-shell-scripts.html) of “Shell scripting with Node.js”
 
 ## More information

@@ -1,5 +1,5 @@
 // Use this file to interactively try out TypeScript
-// Details: 
+// Details: https://github.com/rauschma/nodejs-type-stripping#using-srcplaygroundts-as-a-simple-typescript-playground
 
 import pkg from '../package.json' with {type: 'json'};
 
