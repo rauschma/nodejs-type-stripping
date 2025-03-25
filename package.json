@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "tsc": "tsc",
-    "play": "node --disable-warning=ExperimentalWarning --watch ./src/playground.ts"
+    "play": "node --watch ./src/playground.ts"
   },
   "// scripts": {
     "tsc": "Type-check the repository (no files are emitted)",
